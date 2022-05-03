@@ -1,0 +1,33 @@
+\documentclass{amsart}
+
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{amsmath,amsthm,mathtools}
+\usepackage{bm}
+\definecolor{myred}{RGB}{228,26,28}
+\definecolor{myblue}{RGB}{55,124,184}
+\definecolor{mygreen}{RGB}{77,175,74}
+\definecolor{myorange}{RGB}{255,127,14}
+\definecolor{myviolet}{RGB}{148,103,189}
+\usepackage{tikz, pgf}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\pgfplotsset{compat=1.8}
+\pgfrealjobname{minimal}
+
+\begin{document}
+\beginpgfgraphicnamed{error_GaAs}
+
+\begin{tikzpicture}
+  \begin{semilogyaxis}[xlabel = {$E_{\rm{cut}}$},
+    legend entries = {$\Vert \bm{M}^{1/2}\bm{\Pi}_P(P-P_*) \Vert_{\rm{F}}$,
+      $\Vert \bm{M}^{-1/2}{R(P)} \Vert_{\rm{F}}$},
+    legend style = {at={(0.5,1.05)}, anchor = south, draw = none}]
+    \addplot[mark = +, line width = 1, myblue, mark size=3pt]
+    table [x index=0, y index=1, col sep=comma] {error_GaAs.csv};
+    \addplot[mark = triangle, mark options={solid}, dotted, line width = 1, myorange, mark size=3pt]
+    table [x index=0, y index=2, col sep=comma] {error_GaAs.csv};
+  \end{semilogyaxis}
+\end{tikzpicture}
+
+\endpgfgraphicnamed
+\end{document}

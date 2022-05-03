@@ -12,6 +12,15 @@ Julia 1.7 with the libraries:
 - HDF5 for saving results.
 
 # Usage
+To perform the computations, first open the Julia shell with `julia --project`
+from the location of this repository and then run
+```
+using Pkg
+Pkg.instantiate()
+```
+
+Then, you can run all the computations at once with
+`include("run_all_computations.jl")`.
 
 
 

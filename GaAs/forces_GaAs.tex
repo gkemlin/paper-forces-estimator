@@ -1,0 +1,40 @@
+\documentclass{amsart}
+
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{amsmath,amsthm,mathtools}
+\usepackage{bm}
+\definecolor{myred}{RGB}{228,26,28}
+\definecolor{myblue}{RGB}{55,124,184}
+\definecolor{mygreen}{RGB}{77,175,74}
+\definecolor{myorange}{RGB}{255,127,14}
+\definecolor{myviolet}{RGB}{148,103,189}
+\usepackage{tikz, pgf}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\pgfplotsset{compat=1.8}
+\pgfrealjobname{minimal}
+
+
+\begin{document}
+\beginpgfgraphicnamed{forces_GaAs}
+
+\begin{tikzpicture}
+  \begin{semilogyaxis}[xlabel = {$E_{\rm{cut}}$},
+    legend entries = {$ |F(P) - F(P_*)|$,
+      $ |\text{d} F(P) \cdot (P-P_*)| $,
+      $ |\text{d} F(P) \cdot (\bm{M}^{-1}R(P))| $,
+      $ |\text{d} F(P) \cdot (R_\text{Schur}(P))| $},
+    legend style = {at={(0.97,0.97)}, anchor = north east, draw = none}]
+    \addplot[mark = +, line width = 1, myred, mark size=3pt]
+    table [x index=0, y index=1, col sep=comma] {forces_GaAs.csv};
+    \addplot[mark = x, mark options={solid}, dashed, line width = 1, myblue, mark size=3pt]
+    table [x index=0, y index=2, col sep=comma] {forces_GaAs.csv};
+    \addplot[mark = triangle, mark options={solid}, dotted, line width = 1, myorange, mark size=3pt]
+    table [x index=0, y index=3, col sep=comma] {forces_GaAs.csv};
+    \addplot[mark = square, mark options={solid}, dash dot, line width = 1, mygreen, mark size=2pt]
+    table [x index=0, y index=4, col sep=comma] {forces_GaAs.csv};
+  \end{semilogyaxis}
+\end{tikzpicture}
+
+\endpgfgraphicnamed
+\end{document}
