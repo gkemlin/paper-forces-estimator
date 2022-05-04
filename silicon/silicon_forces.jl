@@ -99,7 +99,7 @@ for Ecut in Ecut_list
     append!(diff_newton_list, norm(compute_error(basis_ref, err, e_newton)))
 end
 
-h5open("forces_silicon_ss4.h5", "w") do file
+h5open("forces_silicon.h5", "w") do file
     println("writing h5 file")
     T = eltype(basis_ref)
     file["E_ref"] = scfres_ref.energies.total

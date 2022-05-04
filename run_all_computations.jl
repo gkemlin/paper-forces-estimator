@@ -21,22 +21,20 @@ include("forces_FD.jl")
 Ecut_ref = 125
 Ecut_list = 5:5:90
 
-@time begin
-    # silicon computations
-    cd("silicon/")
-    include("silicon/silicon_forces.jl")
-    include("silicon/generate_data_silicon_forces.jl")
-    cd("../")
+# silicon computations
+cd("silicon/")
+include("silicon/silicon_forces.jl")
+include("silicon/generate_data_silicon_forces.jl")
+cd("../")
 
-    # GaAs computations
-    cd("GaAs/")
-    include("GaAs/GaAs_forces.jl")
-    include("GaAs/generate_data_GaAs_forces.jl")
-    cd("../")
+# GaAs computations
+cd("GaAs/")
+include("GaAs/GaAs_forces.jl")
+include("GaAs/generate_data_GaAs_forces.jl")
+cd("../")
 
-    # TiO2 computations
-    cd("TiO2/")
-    include("TiO2/TiO2_forces.jl")
-    include("TiO2/generate_data_TiO2_forces.jl")
-    cd("../")
-end
+# TiO2 computations
+cd("TiO2/")
+include("TiO2/TiO2_forces.jl")
+include("TiO2/generate_data_TiO2_forces.jl")
+cd("../")
