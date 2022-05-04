@@ -1,7 +1,7 @@
 using HDF5
 using CSV, Tables
 
-h5open("forces_TiO2_ss4.h5", "r") do file
+h5open("forces_TiO2.h5", "r") do file
     # read h5
     E_ref = read(file["E_ref"])
     println(E_ref)
