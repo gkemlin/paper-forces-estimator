@@ -13,6 +13,7 @@ the DFTK documentation.
 Julia 1.7 with the following Julia libraries:
 - [DFTK.jl](https://dftk.org) v0.5.0 for the simulation environment (this code
   might not work with more recent versions);
+- ForwardDiff for the computation of `dF` with automatic differentiation;
 - LinearAlgebra, IterativeSolvers, LinearMaps, FFTW for the linear algebra
   related computations;
 - HDF5, CSV, Tables for saving and reading results.
