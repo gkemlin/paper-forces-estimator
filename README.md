@@ -3,7 +3,7 @@ structure. It can be used to reproduce the main results from our paper
 _Practical error bounds for properties in plane-wave electronic structure
 calculations_ by Éric Cancès, Geneviève Dusson, Gaspard Kemlin and Antoine
 Levitt, available on [arXiv](https://arxiv.org/abs/2111.01470). In particular,
-it repduces the asymptotic error bound on the H^1-norm of the error from Figure
+it reproduces the asymptotic error bound on the H^1-norm of the error from Figure
 2 (middle) and the asymptotic estimator for the forces from Figures 7 and 9.
 
 This code is used with the refined reference solutions we introduced in the
@@ -11,7 +11,7 @@ paper. A small example of the estimates for the forces is available
 [here](https://docs.dftk.org/stable/examples/error_estimates_forces/) in
 the DFTK documentation.
 
-# Dependencies:
+# Dependencies
 Julia 1.7 with the following Julia libraries:
 - [DFTK.jl](https://dftk.org) v0.5.0 for the simulation environment (this code
   might not work with more recent versions of DFTK);
