@@ -9,7 +9,7 @@ Julia 1.7 with the libraries:
 - [DFTK.jl](https://dftk.org) v0.5.0 for the simulation environment;
 - LinearAlgebra, IterativeSolvers, LinearMaps, FFTW for the linear algebra
   related computations;
-- HDF5 for saving results.
+- HDF5, CSV, Tables for saving and reading results.
 
 # Usage
 To perform the computations, first open the Julia shell with `julia --project`
