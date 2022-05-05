@@ -20,11 +20,12 @@
 
 \begin{tikzpicture}
   \begin{semilogyaxis}[xlabel = {$E_{\rm{cut}}$},
-    legend entries = {$ |F(P) - F(P_*)|$,
+    ylabel = {Hartree/Bohr},
+    legend entries = {$ |F(P) - F_*|$,
       $ |\text{d} F(P) \cdot (P-P_*)| $,
       $ |\text{d} F(P) \cdot (\bm{M}^{-1}R(P))| $,
       $ |\text{d} F(P) \cdot (R_\text{Schur}(P))| $},
-    legend style = {at={(0.97,0.97)}, anchor = north east, draw = none}]
+    legend style = {at={(0.98,0.98)}, anchor = north east, draw = none, fill=none}]
     \addplot[mark = +, line width = 1, myred, mark size=3pt]
     table [x index=0, y index=1, col sep=comma] {forces_silicon.csv};
     \addplot[mark = x, mark options={solid}, dashed, line width = 1, myblue, mark size=3pt]
