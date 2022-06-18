@@ -4,7 +4,7 @@ _Practical error bounds for properties in plane-wave electronic structure
 calculations_ by Éric Cancès, Geneviève Dusson, Gaspard Kemlin and Antoine
 Levitt, available on [arXiv](https://arxiv.org/abs/2111.01470). In particular,
 it reproduces the asymptotic error bound on the H^1-norm of the error from Figure
-2 (middle) and the asymptotic estimator for the forces from Figures 7 and 9.
+2 (middle) and the asymptotic estimator for the forces from Figures 8, 10 and 11.
 
 This code is used with the refined reference solutions we introduced in the
 paper. A small example of the estimates for the forces is available
@@ -44,9 +44,9 @@ described in our paper. Each folder contains:
     - `error_case` files represent the estimation on the error `Π(P-P_*)` in the
       H^1-norm, as in Figure 2 (middle), without the bad error bound;
     - `forces_case` files represent the estimation of the error `F-F*` as in
-    Figure 3 (right);
+    Figure 8 (left) and 10;
     - `diff_forces_case` files represent the improvement of this estimations, as
-      in Figures 7 and 9.
+      in Figures 8 (right) and 11.
 
 Note that, after running the computations, only `.h5` and `.csv` files have been
 generated. You need to compile the `.pdf` files with the associated `.tex` files
